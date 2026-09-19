@@ -1,6 +1,6 @@
-# 21 / Contra a Mesa
+# blackjack(21) / "Perdedor não é quem perde, perdedor é quem desiste"
 
-Jogo web fictício de 21 com créditos virtuais, campanha Standard/Hardcore, modo online contra a mesa, salas multiplayer, bots, rankings e chat.
+Jogo web de 21 com créditos virtuais, campanha Standard/Hardcore, modo online contra a mesa, salas multiplayer, bots, rankings e chat.
 
 ## Arquitetura
 

@@ -1,0 +1,17 @@
+{
+  "name": "21-contra-a-mesa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jogo web fictício de 21 com campanha, online e salas multiplayer.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check backend/game-core.js && node --check script.js && node --check realtime-rooms.js && node --check betting-ui.js",
+    "test": "node tests/static-check.js && node tests/game-core-test.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

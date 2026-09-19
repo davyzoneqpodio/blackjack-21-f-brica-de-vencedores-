@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: jogo-21-multiplayer
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: CLIENT_ORIGIN
+        sync: false

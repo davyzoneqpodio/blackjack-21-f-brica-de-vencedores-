@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0e12">
+  <title>blackjack(21) - "perdedor não é quem perde, perdedor é quem desiste"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="loginScreen" class="center-screen">
+    <section class="auth-card">
+      <div class="logo">21</div>
+      <h1>Contra a Mesa</h1>
+      <p class="muted">Cartas, campanha, partidas online e salas.</p>
+      <form id="loginForm" class="stack">
+        <label>Usuário<input id="username" autocomplete="username" maxlength="24" required></label>
+        <label>Senha<input id="password" type="password" autocomplete="current-password" minlength="6" required></label>
+        <button class="primary" type="submit">Entrar / criar conta</button>
+      </form>
+      <p id="authHint" class="hint">Se o usuário existir, será solicitado o login. Caso não exista, a conta será criada.</p>
+      <div id="authStatus" class="status hidden"></div>
+    </section>
+  </main>
+
+  <main id="appScreen" class="app-shell hidden">
+    <header class="topbar">
+      <div><div class="brand">blackjack(21) - "perdedor não é quem perde, perdedor é quem desiste"</div><div id="topUser" class="muted"></div></div>
+      <button id="topBalance" class="balance-pill">0 créditos</button>
+    </header>
+    <section id="view" class="view"></section>
+    <nav class="bottom-nav">
+      <button data-nav="menu">⌂<span>Menu</span></button>
+      <button data-nav="chat">◉<span>Chat</span></button>
+      <button data-nav="history">◫<span>Histórico</span></button>
+      <button data-nav="account">◎<span>Conta</span></button>
+    </nav>
+  </main>
+
+  <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="supabase-config.js"></script>
+  <script src="betting-ui.js"></script>
+  <script src="realtime-rooms.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

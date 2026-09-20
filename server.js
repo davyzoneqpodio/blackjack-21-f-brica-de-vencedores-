@@ -5,8 +5,7 @@ const http = require('http');
 const crypto = require('crypto');
 const path = require('path');
 const { Server } = require('socket.io');
-const { createDeck, shuffle, scoreHand, isNatural21, resolveDuel, dealerPlay, botShouldHit, betSettlement, withSuitStrength } = require('./backend/game-core');
-
+const { createDeck, shuffle, scoreHand, isNatural21, resolveDuel, dealerPlay, botShouldHit, betSettlement, withSuitStrength } = require('./game-core')
 const PORT = Number(process.env.PORT || 3000);
 const AUTH_SECRET = process.env.AUTH_SECRET || '';
 const SUPABASE_URL = String(process.env.SUPABASE_URL || '').replace(/\/$/, '');
